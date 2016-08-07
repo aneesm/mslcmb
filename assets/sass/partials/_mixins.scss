@@ -1,0 +1,139 @@
+/* ------------------------------------------
+  Functions & Mixins
+--------------------------------------------- */
+//Placeholder Mixin
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+//Rotate Mixin
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+//Rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// skew
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//Scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+
+// Translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+//Transform origin
+@mixin transform-origin($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+//Horizontal & Vertical Center
+@mixin center($horizontal: true, $vertical: true) {
+  position: absolute;
+
+  @if $horizontal and $vertical {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @else if $horizontal {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  @else if $vertical {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+//Transitions
+@mixin transition($transition...) {
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+
+@mixin transition-property($property...) {
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  -webkit-transition-property: $property;
+  transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+  -moz-transition-property: $duration;
+  -o-transition-property: $duration;
+  -webkit-transition-property: $duration;
+  transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+  -moz-transition-timing-function: $timing;
+  -o-transition-timing-function: $timing;
+  -webkit-transition-timing-function: $timing;
+  transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  -webkit-transition-delay: $delay;
+  transition-delay: $delay;
+}
+
+/* ------------------------------------------
+  Custom Functions & Mixins
+--------------------------------------------- */
+//Button
+@mixin button($color, $font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: 1px;
+  color: $color;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  border: 0;
+  width: 100%;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}

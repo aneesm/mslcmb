@@ -1,0 +1,113 @@
+/* ------------------------------------------
+  HEADER
+--------------------------------------------- */
+@-webkit-viewport {
+  width: device-width;
+}
+
+@-moz-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+.navbar {
+  //background: $racing-green;
+  background: transparent;
+  border: none;
+
+  @include breakpoint($tablet) {
+    padding-top: rhythm(2);
+  }
+
+
+  .navbar-nav > li > a {
+    color: $white;
+    text-transform: uppercase;
+    padding-bottom: 6px;
+    letter-spacing: 1px;
+
+    @include breakpoint($tablet) {
+      padding: 10px 15px 6px;
+    }
+
+
+    &:hover {
+      color: $cerulean-blue;
+    }
+  }
+
+  .nav {
+    .active > a,
+    .active > a:focus,
+    .active > a:hover {
+      background: $cerulean-blue;
+      border-radius: 6px;
+      color: $white;
+    }
+  }
+}
+
+.navbar-default {
+  @include transition(all 0.4s ease-in-out);
+
+  &.sticky {
+    background: $tp-black-75;
+  }
+
+  .navbar-brand {
+    color: $white;
+  }
+
+  .navbar-nav {
+    @include breakpoint($tablet) {
+      float: right;
+    }
+
+
+    li {
+      a {
+        &:hover,
+        &:focus {
+          background: $cerulean-blue;
+          color: $white;
+
+          @include breakpoint($tablet) {
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+
+    & > .open > a,
+    & > .open > a:hover,
+    & > .open > a:focus {
+      background: $cerulean-blue;
+      border-radius: 0;
+      color: $white;
+    }
+  }
+
+  .dropdown-menu {
+    border: none;
+
+    & > li > a {
+      &:hover,
+      &:focus {
+        background: $cerulean-blue;
+        border-radius: 0;
+        color: $white;
+      }
+    }
+  }
+}

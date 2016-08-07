@@ -1,0 +1,72 @@
+/* ------------------------------------------
+  FONT VARIABLES
+--------------------------------------------- */
+$didact-gothic: "DidactGothic";
+$sans-serif: "sans-serif";
+
+/* ------------------------------------------
+  COLOUR VARIABLES
+--------------------------------------------- */
+$tp-black-20: rgba(0, 0, 0, 0.2);
+$tp-black-30: rgba(0, 0, 0, 0.3);
+$tp-black-40: rgba(0, 0, 0, 0.4);
+$tp-black-50: rgba(0, 0, 0, 0.5);
+$tp-black-65: rgba(0, 0, 0, 0.65);
+$tp-black-75: rgba(0, 0, 0, 0.75);
+$black: #000000;
+$nero: #181818;
+$grey: #808080;
+$night-rider: #333333;
+$white: #FFFFFF;
+$nobel: #999999;
+$cerulean-blue: #2651A8;
+$wheat: #F5DEB3;
+
+/* ------------------------------------------
+  BASE FONT STYLES
+--------------------------------------------- */
+$base-font-size: 14px;
+
+// The font size set on the root html element.
+$base-line-height: 18px;
+
+// This line-height determines the basic unit of vertical rhythm.
+// Font sizes
+//$rhythm-unit: "rem";
+
+/* ------------------------------------------
+  COMPASS PLUGINS
+--------------------------------------------- */
+@import "susy";
+@import "compass";
+@import "compass/support";
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "compass/utilities/sprites";
+@import "compass/css3";
+@import "compass/typography/vertical_rhythm";
+@import "breakpoint";
+
+/* ------------------------------------------
+  PARTIAL SCSS
+--------------------------------------------- */
+@import "partials/_screen";
+@import "partials/_grids";
+@import "partials/_transitions";
+@import "partials/_mixins";
+@import "partials/_buttons";
+@import "partials/_forms";
+@import "partials/_header";
+@import "partials/_footer";
+@import "partials/_fonts";
+@import "partials/_extra";
+@import "partials/_typography";
+
+/* ------------------------------------------
+  SUSY SETTINGS
+--------------------------------------------- */
+@include establish-baseline;
+
+$susy: (columns: 12, gutters: 0.15, container: 1220px, math: fluid, output: float, global-box-sizing: border-box);
+
+@include border-box-sizing;

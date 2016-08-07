@@ -1,0 +1,16 @@
+/*************** Common instructions ****************/
+//Small Mobile = max width 479px
+//General Mobile = max width 767px
+//Tablet Vertical = min width 768px max-width 991px
+//Tablet Horizontal = min width 992px max-width 1199px
+//Desktop = min width 1200px max width 1399px
+//Desktop Large = min width 1400ox
+
+/* -----------------------------------------------
+  MEDIA QUERIES
+-------------------------------------------------- */
+$mobile-small: 480px;
+$tablet: 768px;
+$tablet-vmax: 992px;
+$desktop: 1200px;
+$desktop-large: 1400px;

@@ -1,0 +1,8 @@
+footer {
+  @include adjust-font-size-to(12px);
+
+  background: $nero;
+  color: $nobel;
+  text-align: center;
+  padding: rhythm(1.5) 0 rhythm(1.25);
+}
