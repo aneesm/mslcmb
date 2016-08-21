@@ -1,0 +1,55 @@
+/* ------------------------------------------
+  PAGE STYLES
+--------------------------------------------- */
+.services {
+  .fullheight {
+    background: url("../images/home-grid-img-2.jpg") no-repeat center center fixed;
+  }
+}
+
+.agents {
+  .fullheight {
+    background: url("../images/agents-img.jpg") no-repeat bottom center fixed;
+  }
+}
+
+.cargo-tracking {
+  .fullheight {
+    background: url("../images/home-grid-img-1.jpg") no-repeat bottom center fixed;
+  }
+}
+
+.contact {
+  .fullheight {
+    background: url("../images/home-grid-img-3.jpg") no-repeat bottom center fixed;
+  }
+
+  h3, label, input, address {
+    color: $sapphire;
+  }
+
+  .address {
+    margin-top: rhythm(2.3);
+
+    address {
+      strong {
+        font-size: 1.35em;
+      }
+
+      font-size: 1.15em;
+
+      abbr[title] {
+        border: none;
+      }
+    }
+  }
+
+  .map {
+    margin-top: rhythm(1);
+  }
+
+  .contact-form,
+  .map {
+    margin-bottom: rhythm(2);
+  }
+}

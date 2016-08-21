@@ -3,3 +3,27 @@ a {
 
   @include transition(all 0.4s ease-in-out);
 }
+
+button {
+  &[type="submit"] {
+    margin-right: rhythm(0.5);
+  }
+
+  &.btn {
+    padding: 10px 15px 6px;
+  }
+
+  &.btn-success {
+    &,
+    &.disabled:hover,
+    &.disabled:focus,
+    &.disabled:active,
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      background: $sapphire;
+      border-color: $sapphire;
+    }
+  }
+}

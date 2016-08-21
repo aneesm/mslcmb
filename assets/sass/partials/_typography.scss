@@ -38,4 +38,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {}
+h6 {
+  margin-bottom: rhythm(0.5);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: rhythm(1);
+}
