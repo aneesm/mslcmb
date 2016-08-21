@@ -2,5 +2,19 @@
   EXTRA STYLES
 --------------------------------------------- */
 .bg-blue {
-  background: $cerulean-blue;
+  background: $sapphire;
+}
+
+.bg-blue-with-white-text {
+  background: $sapphire;
+
+  .title-section {
+    h2 {
+      color: $white;
+    }
+
+    .byline li .middot {
+      background: $white;
+    }
+  }
 }

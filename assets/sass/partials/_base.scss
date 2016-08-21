@@ -10,9 +10,11 @@ $sans-serif: "sans-serif";
 $tp-black-20: rgba(0, 0, 0, 0.2);
 $tp-black-30: rgba(0, 0, 0, 0.3);
 $tp-black-40: rgba(0, 0, 0, 0.4);
+$tp-black-45: rgba(0, 0, 0, 0.45);
 $tp-black-50: rgba(0, 0, 0, 0.5);
 $tp-black-65: rgba(0, 0, 0, 0.65);
 $tp-black-75: rgba(0, 0, 0, 0.75);
+$tp-black-85: rgba(0, 0, 0, 0.85);
 $black: #000000;
 $nero: #181818;
 $grey: #808080;
@@ -21,6 +23,7 @@ $white: #FFFFFF;
 $nobel: #999999;
 $cerulean-blue: #2651A8;
 $wheat: #F5DEB3;
+$sapphire: #18346B;
 
 /* ------------------------------------------
   BASE FONT STYLES
@@ -40,7 +43,6 @@ $base-line-height: 18px;
 @import "susy";
 @import "compass";
 @import "compass/support";
-@import "compass/reset";
 @import "compass/utilities/general/clearfix";
 @import "compass/utilities/sprites";
 @import "compass/css3";
@@ -60,6 +62,7 @@ $base-line-height: 18px;
 @import "partials/_footer";
 @import "partials/_fonts";
 @import "partials/_extra";
+@import "partials/_pages";
 @import "partials/_typography";
 
 /* ------------------------------------------

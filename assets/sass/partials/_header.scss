@@ -21,7 +21,7 @@
   width: device-width;
 }
 
-.navbar {
+.navbar-default {
   //background: $racing-green;
   background: transparent;
   border: none;
@@ -31,19 +31,59 @@
   }
 
 
-  .navbar-nav > li > a {
-    color: $white;
-    text-transform: uppercase;
-    padding-bottom: 6px;
-    letter-spacing: 1px;
+  .navbar-brand {
+    height: auto;
+    position: relative;
+    font-weight: 600;
+    text-align: center;
 
     @include breakpoint($tablet) {
-      padding: 10px 15px 6px;
+      top: -20px;
+      text-align: left;
+      padding-right: 0;
     }
 
 
     &:hover {
-      color: $cerulean-blue;
+      color: $white;
+    }
+
+    img {
+      max-width: 50px;
+
+      @include breakpoint($mobile-small) {
+        max-width: 60px;
+      }
+
+
+      @include breakpoint($tablet) {
+        max-width: none;
+      }
+    }
+
+    img,
+    span {
+      float: left;
+    }
+
+    span {
+      font-size: 0.7em;
+      padding: rhythm(1) 0 0 rhythm(0.5);
+
+      @include breakpoint($mobile-small) {
+        font-size: 1em;
+        padding: rhythm(1.1) 0 0 rhythm(0.75);
+      }
+
+
+      @include breakpoint($tablet) {
+        padding: rhythm(1.4) 0 0 rhythm(0.75);
+      }
+
+
+      @include breakpoint($tablet-vmax) {
+        font-size: 1.145em;
+      }
     }
   }
 
@@ -51,34 +91,92 @@
     .active > a,
     .active > a:focus,
     .active > a:hover {
+      font-weight: 600;
       background: $cerulean-blue;
-      border-radius: 6px;
       color: $white;
+
+      @include breakpoint($tablet) {
+        border-radius: 6px;
+      }
     }
   }
-}
 
-.navbar-default {
   @include transition(all 0.4s ease-in-out);
 
   &.sticky {
-    background: $tp-black-75;
+    background: $sapphire;
+
+    .nav {
+      li {
+        a {
+          &:hover,
+          &:focus {
+            color: $cerulean-blue;
+            background: $white;
+          }
+        }
+      }
+
+      .active > a,
+      .active > a:focus,
+      .active > a:hover {
+        background: $white;
+        color: $cerulean-blue;
+      }
+    }
   }
 
   .navbar-brand {
     color: $white;
   }
 
+  .navbar-toggle {
+    @include transition(all 0.4s ease-in-out);
+
+    margin-top: rhythm(1.5);
+    border-color: $white;
+
+    .icon-bar {
+      background: $white;
+    }
+
+    &:hover,
+    &:focus {
+      background: $white;
+
+      .icon-bar {
+        background: $sapphire;
+      }
+    }
+  }
+
   .navbar-nav {
     @include breakpoint($tablet) {
       float: right;
+      margin-top: rhythm(1);
     }
 
 
     li {
       a {
+        color: $white;
+        text-transform: uppercase;
+        padding-bottom: 6px;
+        letter-spacing: 1px;
+
+        @include breakpoint($tablet) {
+          padding: 10px 12px 6px;
+        }
+
+
+        @include breakpoint($tablet-vmax) {
+          padding: 10px 15px 6px;
+        }
+
+
         &:hover,
         &:focus {
+          font-weight: 600;
           background: $cerulean-blue;
           color: $white;
 

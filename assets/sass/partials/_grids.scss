@@ -75,20 +75,6 @@
   }
 }
 
-@media screen and (max-width: 50em) {
-  .content {
-    padding: 0 10px;
-    text-align: center;
-  }
-
-  // .grid figure {
-  //   display: inline-block;
-  //   float: none;
-  //   margin: 10px auto;
-  //   width: 100%;
-  // }
-}
-
 /* Three column grid styles */
 .three-column {
   text-align: center;
@@ -98,57 +84,32 @@
     line-height: 1.8em;
   }
 
-  .title-section {
-    display: inline-block;
-
-    h2 {
-      font-weight: bold;
-      color: $night-rider;
-    }
-
-    .byline {
-      font-size: 1.15em;
-      text-align: center;
-      display: none;
-
-      @include breakpoint($mobile-small) {
-        display: inline-block;
-      }
-
-
-      li {
-        display: inline-block;
-        padding: 0 rhythm(0.25);
-        color: $grey;
-
-        &:first-child {
-          padding-left: 0;
-        }
-
-        &:last-child {
-          padding-right: 0;
-        }
-
-        .middot {
-          position: relative;
-          top: -3px;
-          display: inline-block;
-          border-radius: 6px;
-          width: 6px;
-          height: 6px;
-          background: $cerulean-blue;
-        }
-      }
-    }
-  }
-
   .columns {
     display: inline-block;
-    background: $cerulean-blue;
     color: $white;
 
     [class*="col-"] {
       margin-bottom: rhythm(1.5);
+
+      .col-img {
+        @include span(12 of 12);
+
+        background: url("../images/home-grid-img-1.jpg") center center no-repeat;
+        background-size: cover !important;
+        min-height: 250px;
+      }
+
+      &:nth-child(2) {
+        .col-img {
+          background: url("../images/home-grid-img-2.jpg") center center no-repeat;
+        }
+      }
+
+      &:nth-child(3) {
+        .col-img {
+          background: url("../images/home-grid-img-3.jpg") center center no-repeat;
+        }
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -159,5 +120,248 @@
   .highlight {
     color: $wheat;
     font-weight: 600;
+  }
+}
+
+/* Three column grid styles 2 */
+.three-column-style-2 {
+  padding: rhythm(3) rhythm(1.5) 0 rhythm(1.5);
+  background: #fff;
+  text-align: center;
+  color: #7f7f7f;
+  position: relative;
+
+  [class*="col-"] {
+    & > .box {
+      border-bottom: 1px solid $nobel;
+
+      @include breakpoint($tablet) {
+        border-bottom: none;
+      }
+
+
+      padding-bottom: rhythm(1.25);
+    }
+
+    &:nth-child(1) {
+      .box {
+        li {
+          i {
+            color: #2aaf67;
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .box {
+        li {
+          i {
+            color: #00bff3;
+          }
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .box {
+        li {
+          i {
+            color: #2aaf67;
+          }
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .box {
+        border-bottom: none;
+
+        li {
+          i {
+            color: #6173f4;
+          }
+        }
+      }
+    }
+  }
+
+  .box {
+    @include span(12 of 12);
+
+    min-height: 225px;
+    margin-bottom: rhythm(1.5);
+
+    h3 {
+      color: $sapphire;
+      text-transform: uppercase;
+    }
+
+    p, li {
+      font-size: 1.2em;
+      color: $grey;
+    }
+
+    li {
+      margin: rhythm() 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      i {
+        font-size: 0.75em;
+      }
+    }
+
+    .icon {
+      width: 85px;
+      height: 85px;
+      margin: 0 auto;
+      top: 0;
+      margin-bottom: rhythm(1);
+      position: relative;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%;
+      display: table;
+      text-align: center;
+
+      &.colored-1 {
+        background: #2aaf67;
+      }
+
+      &.colored-2 {
+        background: #00bff3;
+      }
+
+      &.colored-3 {
+        background: #f26522;
+      }
+
+      &.colored-4 {
+        background: #6173f4;
+      }
+
+      & > span {
+        display: table-cell;
+        vertical-align: middle;
+
+        i {
+          font-size: 1.85em;
+          color: $white;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+/* Two column grid styles */
+.two-column {
+  .content-item {
+    float: left;
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+
+    .content-figure {
+      overflow: hidden;
+      position: relative;
+      height: 400px;
+
+      @include breakpoint($tablet) {
+        height: auto;
+      }
+
+
+      .col-img {
+        background: url("../images/services-grid-img-1.jpg") center center;
+        background-size: cover !important;
+      }
+    }
+
+    &.img-right {
+      .content-figure {
+        position: relative;
+        top: auto;
+        bottom: auto;
+
+        @include breakpoint($tablet) {
+          position: absolute;
+          right: 0px;
+          top: 0;
+          bottom: 0;
+        }
+
+
+        .col-img {
+          background: url("../images/services-grid-img-2.jpg") center center;
+        }
+      }
+    }
+
+    .content-description,
+    .content-figure {
+      display: block;
+      width: 100%;
+
+      @include breakpoint($tablet) {
+        width: 50%;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      .content-figure > div {
+        @include scale(1.1);
+      }
+    }
+
+    .content-figure {
+      & > div {
+        position: relative;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include transition(all 0.5s ease);
+      }
+    }
+
+    .content-description {
+      background: $white;
+      padding: 4em;
+
+      h3 {
+        color: $sapphire;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-size: 1.2em;
+        color: $grey;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
