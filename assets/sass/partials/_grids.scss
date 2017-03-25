@@ -84,6 +84,51 @@
     line-height: 1.8em;
   }
 
+  .title-section {
+    display: inline-block;
+
+    h2 {
+      font-weight: bold;
+      color: $night-rider;
+      text-transform: uppercase;
+    }
+
+    .byline {
+      font-size: 1.15em;
+      text-align: center;
+      display: none;
+
+      @include breakpoint($mobile-small) {
+        display: inline-block;
+      }
+
+
+      li {
+        display: inline-block;
+        padding: 0 rhythm(0.25);
+        color: $grey;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        .middot {
+          position: relative;
+          top: -3px;
+          display: inline-block;
+          border-radius: 6px;
+          width: 6px;
+          height: 6px;
+          background: $sapphire;
+        }
+      }
+    }
+  }
+
   .columns {
     display: inline-block;
     color: $white;
