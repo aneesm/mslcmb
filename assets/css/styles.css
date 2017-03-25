@@ -27,20 +27,20 @@
   float: left;
   margin-bottom: 1.47857em;
 }
-/* line 66, ../../../../../../Users/thesmallaxe/.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/language/susy/_gallery.scss */
+/* line 66, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/language/susy/_gallery.scss */
 .grid:nth-child(3n + 1) {
   margin-left: 0;
   margin-right: -100%;
   clear: both;
   margin-left: 0;
 }
-/* line 66, ../../../../../../Users/thesmallaxe/.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/language/susy/_gallery.scss */
+/* line 66, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/language/susy/_gallery.scss */
 .grid:nth-child(3n + 2) {
   margin-left: 33.89831%;
   margin-right: -100%;
   clear: none;
 }
-/* line 66, ../../../../../../Users/thesmallaxe/.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/language/susy/_gallery.scss */
+/* line 66, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/language/susy/_gallery.scss */
 .grid:nth-child(3n + 3) {
   margin-left: 67.79661%;
   margin-right: -100%;
@@ -709,7 +709,7 @@ footer p {
 
 @font-face {
   font-family: "DidactGothic";
-  src: url('../fonts/didactgothic-webfont.woff?1470523282') format('woff'), url('../fonts/didactgothic-webfont.woff2?1470523282') format('woff2'), url('../fonts/didactgothic-webfont.ttf?1470523282') format('truetype'), url('../fonts/didactgothic-webfont.svg?1470523282') format('svg'), url('../fonts/didactgothic-webfont.eot?1470523282') format('embedded-opentype');
+  src: url('../fonts/didactgothic-webfont.woff?1490438720') format('woff'), url('../fonts/didactgothic-webfont.woff2?1490438720') format('woff2'), url('../fonts/didactgothic-webfont.ttf?1490438720') format('truetype'), url('../fonts/didactgothic-webfont.svg?1490438720') format('svg'), url('../fonts/didactgothic-webfont.eot?1490438720') format('embedded-opentype');
 }
 /* ------------------------------------------
   EXTRA STYLES
@@ -845,13 +845,13 @@ p {
 /* ------------------------------------------
   SUSY SETTINGS
 --------------------------------------------- */
-/* line 106, ../../../../../../Users/thesmallaxe/.rvm/gems/ruby-2.2.1/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 87.5%;
   line-height: 1.28571em;
 }
 
-/* line 21, ../../../../../../Users/thesmallaxe/.rvm/gems/ruby-2.2.1/gems/susy-2.2.6/sass/susy/language/susy/_box-sizing.scss */
+/* line 21, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/language/susy/_box-sizing.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -981,7 +981,7 @@ img {
   }
 }
 /* line 113, ../sass/styles.scss */
-.fullheight .caption h1, .fullheight .caption p {
+.fullheight .caption h1, .fullheight .caption h2 {
   display: inline-block;
   margin-bottom: 0;
 }
@@ -1009,20 +1009,20 @@ img {
   }
 }
 /* line 137, ../sass/styles.scss */
-.fullheight .caption p {
+.fullheight .caption h2 {
   font-size: 1.75em;
   line-height: 1.25em;
   color: #999999;
 }
 @media (min-width: 768px) {
   /* line 137, ../sass/styles.scss */
-  .fullheight .caption p {
+  .fullheight .caption h2 {
     font-size: 2.25em;
   }
 }
 @media (min-width: 992px) {
   /* line 137, ../sass/styles.scss */
-  .fullheight .caption p {
+  .fullheight .caption h2 {
     font-size: 2.57143em;
     line-height: 1.5em;
   }
